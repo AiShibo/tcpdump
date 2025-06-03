@@ -1,3 +1,5 @@
+#include <compat.h>
+
 /*	$OpenBSD: pfctl.c,v 1.397 2025/05/26 20:55:30 sashan Exp $ */
 
 /*

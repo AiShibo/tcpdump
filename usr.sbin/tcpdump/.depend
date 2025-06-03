@@ -1,0 +1,1 @@
+tcpdump.full: /usr/lib/libc.a /usr/lib/libpcap.a /usr/lib/libcrypto.a

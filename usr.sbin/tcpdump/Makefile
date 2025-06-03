@@ -23,7 +23,9 @@
 PROG=	tcpdump
 MAN=	tcpdump.8
 
-CFLAGS+=-Wall -I${.CURDIR}/pfctl -I${.CURDIR}/hostapd
+CFLAGS+=-Wall -I${.CURDIR}/../../sbin/pfctl -I${.CURDIR}/../hostapd
+
+CFLAGS+=-I${.CURDIR}/../../compat
 
 # for pcap-int.h
 CFLAGS+=-I${.CURDIR}/../../lib/libpcap

@@ -50,8 +50,8 @@
 #include <time.h>
 #include <limits.h>
 
-#include "pfctl_parser.h"
 #include "pfctl.h"
+#include "pfctl_parser.h"
 
 extern void	usage(void);
 static void	print_table(struct pfr_table *, int, int);
