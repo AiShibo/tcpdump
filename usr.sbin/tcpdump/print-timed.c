@@ -1,3 +1,5 @@
+#include <compat.h>
+
 /*	$OpenBSD: print-timed.c,v 1.8 2020/01/24 22:46:37 procter Exp $	*/
 
 /*

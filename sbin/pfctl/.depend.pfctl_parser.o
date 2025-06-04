@@ -21,7 +21,9 @@ pfctl_parser.o: pfctl_parser.c /usr/include/sys/types.h \
   /usr/include/xlocale/_time.h \
   /home/shibo/tcpdump/sbin/pfctl/../../sys/net/if_arp.h \
   /usr/include/netinet/in.h /usr/include/netinet6/in6.h \
-  /usr/include/netinet/ip.h /usr/include/netinet/ip_icmp.h \
+  /home/shibo/tcpdump/sbin/pfctl/../../sys/netinet/ip.h \
+  /usr/include/stdint.h /usr/include/machine/_stdint.h \
+  /usr/include/x86/_stdint.h /usr/include/netinet/ip_icmp.h \
   /usr/include/netinet/icmp6.h \
   /home/shibo/tcpdump/sbin/pfctl/../../sys/net/pfvar.h \
   /home/shibo/tcpdump/sbin/pfctl/../../sys/sys/queue.h \

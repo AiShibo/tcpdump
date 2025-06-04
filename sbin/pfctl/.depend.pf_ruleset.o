@@ -20,7 +20,8 @@ pf_ruleset.o: /home/shibo/tcpdump/sbin/pfctl/../../sys/net/pf_ruleset.c \
   /home/shibo/tcpdump/sbin/pfctl/../../sys/sys/socket.h \
   /usr/include/sys/_iovec.h /usr/include/sys/_sockaddr_storage.h \
   /usr/include/sys/syslog.h /usr/include/netinet/in.h \
-  /usr/include/netinet6/in6.h /usr/include/netinet/ip.h \
+  /usr/include/netinet6/in6.h \
+  /home/shibo/tcpdump/sbin/pfctl/../../sys/netinet/ip.h \
   /usr/include/netinet/tcp.h \
   /home/shibo/tcpdump/sbin/pfctl/../../sys/net/if.h \
   /usr/include/sys/time.h /usr/include/sys/_clock_id.h \

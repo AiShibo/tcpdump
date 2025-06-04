@@ -1,0 +1,27 @@
+util.o: util.c /usr/include/sys/types.h /usr/include/sys/cdefs.h \
+  /usr/include/machine/endian.h /usr/include/x86/endian.h \
+  /usr/include/sys/_types.h /usr/include/machine/_types.h \
+  /usr/include/x86/_types.h /usr/include/machine/_limits.h \
+  /usr/include/x86/_limits.h /usr/include/sys/_endian.h \
+  /usr/include/sys/_pthreadtypes.h /usr/include/sys/_stdint.h \
+  /usr/include/sys/bitcount.h /usr/include/sys/select.h \
+  /usr/include/sys/_sigset.h /usr/include/sys/_timeval.h \
+  /usr/include/sys/timespec.h /usr/include/sys/_timespec.h \
+  /usr/include/sys/time.h /usr/include/sys/_clock_id.h \
+  /usr/include/time.h /usr/include/sys/_null.h \
+  /usr/include/xlocale/_time.h /usr/include/sys/file.h \
+  /usr/include/sys/fcntl.h /usr/include/sys/unistd.h \
+  /usr/include/sys/limits.h /usr/include/sys/stat.h /usr/include/ctype.h \
+  /usr/include/_ctype.h /usr/include/runetype.h \
+  /usr/include/xlocale/_ctype.h /usr/include/err.h /usr/include/errno.h \
+  /home/shibo/tcpdump/usr.sbin/tcpdump/../../lib/libpcap/pcap.h \
+  /home/shibo/tcpdump/usr.sbin/tcpdump/../../sys/net/bpf.h \
+  /usr/include/stdio.h /usr/include/stdarg.h /usr/include/x86/stdarg.h \
+  /usr/include/sys/_stdarg.h /usr/include/stdlib.h /usr/include/string.h \
+  /usr/include/strings.h /usr/include/xlocale/_strings.h \
+  /usr/include/xlocale/_string.h /usr/include/unistd.h interface.h \
+  /home/shibo/tcpdump/usr.sbin/tcpdump/../../compat/compat.h \
+  /usr/include/stdint.h /usr/include/machine/_stdint.h \
+  /usr/include/x86/_stdint.h /usr/include/arpa/inet.h \
+  /usr/include/endian.h privsep.h \
+  /home/shibo/tcpdump/usr.sbin/tcpdump/../../lib/libpcap/pcap-int.h

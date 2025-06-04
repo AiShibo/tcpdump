@@ -40,6 +40,12 @@
 #ifndef _NET_BPF_H_
 #define _NET_BPF_H_
 
+
+#ifndef __bounded
+#define __bounded(args)
+#endif
+
+
 /* BSD style release date */
 #define BPF_RELEASE 199606
 

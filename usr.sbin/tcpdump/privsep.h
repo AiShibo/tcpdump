@@ -1,3 +1,5 @@
+#include <compat.h>
+
 /*
  * Copyright (c) 2003 Can Erkin Acar
  *

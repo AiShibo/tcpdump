@@ -17,7 +17,9 @@ parse.o: parse.c /usr/include/sys/types.h /usr/include/sys/cdefs.h \
   /home/shibo/tcpdump/sbin/pfctl/../../sys/net/if.h \
   /home/shibo/tcpdump/sbin/pfctl/../../sys/net/if_arp.h \
   /usr/include/netinet/in.h /usr/include/netinet6/in6.h \
-  /usr/include/netinet/ip.h /usr/include/netinet/ip_icmp.h \
+  /home/shibo/tcpdump/sbin/pfctl/../../sys/netinet/ip.h \
+  /usr/include/stdint.h /usr/include/machine/_stdint.h \
+  /usr/include/x86/_stdint.h /usr/include/netinet/ip_icmp.h \
   /usr/include/netinet/icmp6.h \
   /home/shibo/tcpdump/sbin/pfctl/../../sys/net/pfvar.h \
   /home/shibo/tcpdump/sbin/pfctl/../../sys/sys/queue.h \
@@ -38,5 +40,4 @@ parse.o: parse.c /usr/include/sys/types.h /usr/include/sys/cdefs.h \
   /usr/include/grp.h /usr/include/md5.h /usr/include/sys/md5.h \
   pfctl_parser.h pfctl.h \
   /home/shibo/tcpdump/sbin/pfctl/../../compat/compat.h \
-  /usr/include/stdint.h /usr/include/machine/_stdint.h \
-  /usr/include/x86/_stdint.h /usr/include/endian.h
+  /usr/include/endian.h

@@ -15,7 +15,9 @@ pfctl_osfp.o: pfctl_osfp.c /usr/include/sys/types.h \
   /usr/include/sys/_iovec.h /usr/include/machine/_align.h \
   /usr/include/x86/_align.h /usr/include/sys/_sockaddr_storage.h \
   /usr/include/netinet/in.h /usr/include/netinet6/in6.h \
-  /usr/include/netinet/ip.h /usr/include/netinet/ip6.h \
+  /home/shibo/tcpdump/sbin/pfctl/../../sys/netinet/ip.h \
+  /usr/include/stdint.h /usr/include/machine/_stdint.h \
+  /usr/include/x86/_stdint.h /usr/include/netinet/ip6.h \
   /home/shibo/tcpdump/sbin/pfctl/../../sys/net/if.h \
   /usr/include/sys/time.h /usr/include/sys/_clock_id.h \
   /usr/include/time.h /usr/include/sys/_null.h \

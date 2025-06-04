@@ -1,3 +1,5 @@
+#include <compat.h>
+
 /*	$OpenBSD: addrtoname.c,v 1.40 2021/12/01 18:28:45 deraadt Exp $	*/
 
 /*

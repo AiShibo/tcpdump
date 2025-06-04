@@ -28,6 +28,8 @@ CFLAGS+=-Wall -I${.CURDIR}/../../sbin/pfctl -I${.CURDIR}/../hostapd
 ############################
 
 CFLAGS+=-I${.CURDIR}/../../compat
+CFLAGS+=-I${.CURDIR}/../../sys
+CFLAGS+=-I${.CURDIR}/../../lib/libpcap
 
 ############################
 
@@ -37,6 +39,7 @@ CFLAGS+=-I${.CURDIR}/../../lib/libpcap
 CFLAGS+=-DCSLIP -DPPP -DHAVE_FDDI -DETHER_SERVICE -DHAVE_ETHER_NTOHOST -DINET6
 
 LDADD+=	-lpcap -lcrypto
+LDADD+=	-lmd -lc
 DPADD+=	${LIBPCAP} ${LIBCRYPTO}
 
 SRCS=	tcpdump.c addrtoname.c privsep.c privsep_fdpass.c privsep_pcap.c \
