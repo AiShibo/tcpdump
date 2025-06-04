@@ -31,7 +31,8 @@ pf_print_state.o: pf_print_state.c \
   /home/shibo/tcpdump/usr.sbin/tcpdump/../../sys/net/route.h \
   /usr/include/netdb.h /usr/include/stdio.h /usr/include/string.h \
   /usr/include/strings.h /usr/include/xlocale/_strings.h \
-  /usr/include/xlocale/_string.h /usr/include/vis.h \
+  /usr/include/xlocale/_string.h \
+  /home/shibo/tcpdump/usr.sbin/tcpdump/../../compat/vis.h \
   /home/shibo/tcpdump/usr.sbin/tcpdump/../../sbin/pfctl/pfctl_parser.h \
   /home/shibo/tcpdump/usr.sbin/tcpdump/../../sbin/pfctl/pfctl.h \
   addrtoname.h

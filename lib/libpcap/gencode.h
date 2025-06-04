@@ -1,3 +1,4 @@
+#include <compat.h>
 /*	$OpenBSD: gencode.h,v 1.22 2024/05/21 11:13:08 jsg Exp $	*/
 
 /*

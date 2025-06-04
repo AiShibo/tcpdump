@@ -127,6 +127,7 @@ priv_pcap_setfilter(pcap_t *hpcap, int oflag, u_int32_t netmask)
 
 	ebuf = pcap_geterr(hpcap);
 	snap = pcap_snapshot(hpcap);
+	printf("returned from pcap, snap is %d\n", snap);
 	link = pcap_datalink(hpcap);
 
 	fcode = calloc(1, sizeof(*fcode));
@@ -200,15 +201,20 @@ pcap_live(const char *device, int snaplen, int promisc, u_int dlt,
 	if (promisc)
 		/* this is allowed to fail */
 		ioctl(fd, BIOCPROMISC, NULL);
+
+	/*
 	if (ioctl(fd, BIOCSDIRFILT, &dirfilt) == -1)
 		goto error;
 
 	if (ioctl(fd, BIOCSFILDROP, &fildrop) == -1)
 		goto error;
 
+	*/
 	/* lock the descriptor */
+	/*
 	if (ioctl(fd, BIOCLOCK, NULL) == -1)
 		goto error;
+	*/
 	return (fd);
 
  error:
@@ -317,6 +323,12 @@ priv_pcap_live(const char *dev, int slen, int prom, int to_ms,
 		    pcap_strerror(errno));
 		goto bad;
 	}
+
+	/*
+	printf("before\n");
+	pcap_activate(p);
+	printf("after\n");
+	*/
 	return (p);
 
  bad:

@@ -2,7 +2,6 @@
 #include <arpa/inet.h> // for htonl()
 #include <endian.h>
 #define __dead __attribute__((noreturn))
-#define HTONL(x) ((x) = htonl((x)))
 #define	HW_PHYSMEM64		19
 #define	RT_TABLEID_MAX		255
 #define	KERN_MAXCLUSTERS	67
@@ -63,6 +62,8 @@
 #ifndef swap64
 #define swap64(x) __builtin_bswap64(x)
 #endif
+
+#define SA_LEN(x) ((x)->sa_len)
 
 /*
 #define IPV6_MINHOPCOUNT 65

@@ -9,6 +9,9 @@ DEFS=	-DHAVE_SYS_IOCCOM_H -DHAVE_SYS_SOCKIO_H -DHAVE_ETHER_HOSTTON \
 	-DINET6 -DHAVE_BSD_IEEE80211
 
 CFLAGS+=-I. -I${.CURDIR} -Dyylval=pcap_yylval ${DEFS}
+CFLAGS += -I${.CURDIR}/../../sys
+CFLAGS += -I${.CURDIR}/../../compat
+CFLAGS += -fPIC
 
 HDRS=	pcap.h pcap-namedb.h
 SRCS=	pcap.c inet.c gencode.c optimize.c nametoaddr.c etherent.c \

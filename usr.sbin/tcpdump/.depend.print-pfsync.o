@@ -43,7 +43,7 @@ print-pfsync.o: print-pfsync.c /usr/include/sys/time.h \
   /usr/include/x86/ucontext.h /usr/include/sys/_ucontext.h \
   /usr/include/string.h /usr/include/strings.h \
   /usr/include/xlocale/_strings.h /usr/include/xlocale/_string.h \
-  /usr/include/vis.h interface.h \
+  /home/shibo/tcpdump/usr.sbin/tcpdump/../../compat/vis.h interface.h \
   /home/shibo/tcpdump/usr.sbin/tcpdump/../../compat/compat.h \
   /usr/include/arpa/inet.h /usr/include/endian.h addrtoname.h \
   /home/shibo/tcpdump/usr.sbin/tcpdump/../../sbin/pfctl/pfctl_parser.h \
