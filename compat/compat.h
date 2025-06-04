@@ -1,17 +1,21 @@
 #include <stdint.h>    // for uint32_t
 #include <arpa/inet.h> // for htonl()
+#include <endian.h>
 #define __dead __attribute__((noreturn))
 #define HTONL(x) ((x) = htonl((x)))
 #define	HW_PHYSMEM64		19
 #define	RT_TABLEID_MAX		255
 #define	KERN_MAXCLUSTERS	67
+#define	NET_RT_TABLE	5
+#define freezero(ptr, size) free(ptr)
+#define betoh64(x) be64toh(x)
+
 /*
 #define HOST_NAME_MAX 255
 #define IPV6_MINHOPCOUNT 65
 #define TCP_SACK_ENABLE         0x08
 #define PATH_MAX 1024
 
-#define freezero(ptr, size) free(ptr)
 #define DEF_WEAK(x)
 #define WRAP(x)(...)
 

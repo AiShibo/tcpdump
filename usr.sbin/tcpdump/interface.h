@@ -1,4 +1,5 @@
 #include <compat.h>
+
 /*	$OpenBSD: interface.h,v 1.88 2024/05/21 05:00:48 jsg Exp $	*/
 
 /*

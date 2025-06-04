@@ -1,3 +1,5 @@
+#include <compat.h>
+
 /*	$OpenBSD: pf_ruleset.c,v 1.21 2023/06/30 09:58:30 mvs Exp $ */
 
 /*

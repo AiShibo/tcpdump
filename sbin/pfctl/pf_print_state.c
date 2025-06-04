@@ -1,3 +1,4 @@
+#include <compat.h>
 /*	$OpenBSD: pf_print_state.c,v 1.69 2019/02/02 15:43:18 yasuoka Exp $	*/
 
 /*
@@ -39,6 +40,7 @@
 #include <arpa/inet.h>
 #include <net/pfvar.h>
 #include <netdb.h>
+
 
 #include <stdio.h>
 #include <string.h>

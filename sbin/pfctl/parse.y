@@ -56,6 +56,7 @@
 
 #include "pfctl_parser.h"
 #include "pfctl.h"
+#include "compat.h"
 
 static struct pfctl	*pf = NULL;
 static int		 debug = 0;

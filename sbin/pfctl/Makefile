@@ -14,8 +14,11 @@ MAN=	pfctl.8
 
 # Ruleset and Anchor handling
 .PATH: ${.CURDIR}/../../sys/net
+.PATH: ${.CURDIR}/../../compat
 
 LDADD+=	-lm
+LDADD+=	-lmd
+LDADD+=	-lc
 DPADD+=	${LIBM}
 
 .include <bsd.prog.mk>
