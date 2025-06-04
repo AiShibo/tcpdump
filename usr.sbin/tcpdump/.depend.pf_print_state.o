@@ -1,10 +1,14 @@
-pf_print_state.o: pf_print_state.c /usr/include/sys/types.h \
-  /usr/include/sys/cdefs.h /usr/include/machine/endian.h \
-  /usr/include/x86/endian.h /usr/include/sys/_types.h \
-  /usr/include/machine/_types.h /usr/include/x86/_types.h \
-  /usr/include/machine/_limits.h /usr/include/x86/_limits.h \
-  /usr/include/sys/_endian.h /usr/include/sys/_pthreadtypes.h \
-  /usr/include/sys/_stdint.h /usr/include/sys/bitcount.h \
+pf_print_state.o: pf_print_state.c \
+  /home/shibo/tcpdump/usr.sbin/tcpdump/../../compat/compat.h \
+  /usr/include/stdint.h /usr/include/sys/cdefs.h \
+  /usr/include/sys/_types.h /usr/include/machine/_types.h \
+  /usr/include/x86/_types.h /usr/include/machine/_limits.h \
+  /usr/include/x86/_limits.h /usr/include/machine/_stdint.h \
+  /usr/include/x86/_stdint.h /usr/include/sys/_stdint.h \
+  /usr/include/arpa/inet.h /usr/include/machine/endian.h \
+  /usr/include/x86/endian.h /usr/include/sys/_endian.h \
+  /usr/include/endian.h /usr/include/sys/types.h \
+  /usr/include/sys/_pthreadtypes.h /usr/include/sys/bitcount.h \
   /usr/include/sys/select.h /usr/include/sys/_sigset.h \
   /usr/include/sys/_timeval.h /usr/include/sys/timespec.h \
   /usr/include/sys/_timespec.h \
@@ -25,10 +29,9 @@ pf_print_state.o: pf_print_state.c /usr/include/sys/types.h \
   /home/shibo/tcpdump/usr.sbin/tcpdump/../../sys/sys/timeout.h \
   /home/shibo/tcpdump/usr.sbin/tcpdump/../../sys/net/radix.h \
   /home/shibo/tcpdump/usr.sbin/tcpdump/../../sys/net/route.h \
-  /usr/include/arpa/inet.h /usr/include/netdb.h /usr/include/stdio.h \
-  /usr/include/string.h /usr/include/strings.h \
-  /usr/include/xlocale/_strings.h /usr/include/xlocale/_string.h \
-  /usr/include/vis.h \
+  /usr/include/netdb.h /usr/include/stdio.h /usr/include/string.h \
+  /usr/include/strings.h /usr/include/xlocale/_strings.h \
+  /usr/include/xlocale/_string.h /usr/include/vis.h \
   /home/shibo/tcpdump/usr.sbin/tcpdump/../../sbin/pfctl/pfctl_parser.h \
   /home/shibo/tcpdump/usr.sbin/tcpdump/../../sbin/pfctl/pfctl.h \
   addrtoname.h

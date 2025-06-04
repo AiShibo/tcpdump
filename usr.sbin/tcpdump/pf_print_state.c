@@ -1,3 +1,5 @@
+#include <compat.h>
+
 /*	$OpenBSD: pf_print_state.c,v 1.14 2018/09/07 07:49:43 kevlo Exp $	*/
 
 /*

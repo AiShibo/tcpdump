@@ -23,6 +23,47 @@
 #define	IEEE80211_FC0_SUBTYPE_QOS		0x80
 #define NAMESERVER_PORT	53
 
+#define pledge(...) (0)
+#define unveil(...) (0)
+
+#ifndef letoh16
+#define letoh16(x) (le16toh(x))
+#endif
+
+#ifndef letoh32
+#define letoh32(x) (le32toh(x))
+#endif
+
+#ifndef letoh64
+#define letoh64(x) (le64toh(x))
+#endif
+
+/* Provide missing macros for big-endian to host conversions */
+#ifndef betoh16
+#define betoh16(x) (be16toh(x))
+#endif
+
+#ifndef betoh32
+#define betoh32(x) (be32toh(x))
+#endif
+
+#ifndef betoh64
+#define betoh64(x) (be64toh(x))
+#endif
+
+/* Define swap macros using built-in byte swap if not already defined */
+#ifndef swap16
+#define swap16(x) __builtin_bswap16(x)
+#endif
+
+#ifndef swap32
+#define swap32(x) __builtin_bswap32(x)
+#endif
+
+#ifndef swap64
+#define swap64(x) __builtin_bswap64(x)
+#endif
+
 /*
 #define IPV6_MINHOPCOUNT 65
 #define TCP_SACK_ENABLE         0x08

@@ -1,3 +1,5 @@
+#include <compat.h>
+
 /*	$OpenBSD: privsep.c,v 1.57 2021/10/24 21:24:19 deraadt Exp $	*/
 
 /*

@@ -1,3 +1,5 @@
+#include <compat.h>
+
 /*	$OpenBSD: privsep_pcap.c,v 1.25 2019/06/28 13:32:51 deraadt Exp $ */
 
 /*
