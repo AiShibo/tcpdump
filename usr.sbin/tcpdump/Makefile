@@ -29,12 +29,11 @@ CFLAGS+=-Wall -I${.CURDIR}/../../sbin/pfctl -I${.CURDIR}/../hostapd
 
 CFLAGS+=-I${.CURDIR}/../../compat
 CFLAGS+=-I${.CURDIR}/../../sys
-# CFLAGS+=-I${.CURDIR}/../../lib/libpcap
 
 ############################
 
 # for pcap-int.h
-# CFLAGS+=-I${.CURDIR}/../../lib/libpcap
+CFLAGS+=-I${.CURDIR}/../../lib/libpcap
 
 CFLAGS+=-DCSLIP -DPPP -DHAVE_FDDI -DETHER_SERVICE -DHAVE_ETHER_NTOHOST -DINET6
 
@@ -74,4 +73,9 @@ CFLAGS+=-DFAKE_PF_KERNEL
 
 AWKS =	atime.awk packetdat.awk send-ack.awk stime.awk
 
+debug:
+	echo ${LIBPCAP}
+
 .include <bsd.prog.mk>
+
+

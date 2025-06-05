@@ -465,6 +465,7 @@ main(int argc, char **argv)
 		}
 	}
 	i = pcap_snapshot(pd);
+	printf("first pcap_snapshot is %d\n", i);
 	if (snaplen < i) {
 		warning("snaplen raised from %d to %d", snaplen, i);
 		snaplen = i;
