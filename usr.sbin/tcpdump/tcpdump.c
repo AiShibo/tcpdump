@@ -140,8 +140,10 @@ lookup_printer(int type)
 	struct printer *p;
 
 	for (p = printers; p->f; ++p) {
-		if (type == p->type)
+		if (type == p->type) {
+			printf("type is %d\n", type);
 			return p->f;
+		}
 	}
 
 	error("unknown data link type 0x%x", type);
@@ -216,6 +218,8 @@ main(int argc, char **argv)
 	u_char *pcap_userdata;
 	u_int dirfilt = 0, dlt = (u_int) -1;
 	const char *errstr;
+
+	printf("sizeof pcap_pkthdr is %d\n", sizeof(struct pcap_pkthdr));
 
 	if ((cp = strrchr(argv[0], '/')) != NULL)
 		program_name = cp + 1;
@@ -451,8 +455,8 @@ main(int argc, char **argv)
 			if (device == NULL)
 				error("%s", ebuf);
 		}
-		pd = priv_pcap_live(device, snaplen, !pflag, 1000, ebuf,
-		    dlt, dirfilt, Bflag);
+		// pd = priv_pcap_live(device, snaplen, !pflag, 1000, ebuf,
+		 pd = pcap_open_live(device, snaplen, !pflag, 1000, ebuf);
 		if (pd == NULL)
 			error("%s", ebuf);
 

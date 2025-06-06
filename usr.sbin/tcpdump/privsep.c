@@ -126,6 +126,7 @@ static void	logmsg(int, const char *, ...);
 static void
 drop_privs(int nochroot)
 {
+#if 0
 	struct passwd *pw;
 
 	/*
@@ -153,6 +154,7 @@ drop_privs(int nochroot)
 		err(1, "setresgid() failed");
 	if (setresuid(pw->pw_uid, pw->pw_uid, pw->pw_uid) == -1)
 		err(1, "setresuid() failed");
+#endif
 }
 
 int
