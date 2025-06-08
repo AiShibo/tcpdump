@@ -455,8 +455,9 @@ main(int argc, char **argv)
 			if (device == NULL)
 				error("%s", ebuf);
 		}
-		// pd = priv_pcap_live(device, snaplen, !pflag, 1000, ebuf,
-		 pd = pcap_open_live(device, snaplen, !pflag, 1000, ebuf);
+		pd = priv_pcap_live(device, snaplen, !pflag, 1000, ebuf,
+				dlt, dirfilt, Bflag);
+		// pd = pcap_open_live(device, snaplen, !pflag, 1000, ebuf);
 		if (pd == NULL)
 			error("%s", ebuf);
 

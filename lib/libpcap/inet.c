@@ -119,6 +119,8 @@ pcap_lookupdev(char *errbuf)
 	const char *errstr;
 	static char device[IF_NAMESIZE + 1];
 
+	printf("custon library!\n");
+
 	if (getifaddrs(&ifap) != 0) {
 		(void)snprintf(errbuf, PCAP_ERRBUF_SIZE,
 		    "getifaddrs: %s", pcap_strerror(errno));
