@@ -67,8 +67,7 @@ SRCS+=	pf_osfp.c pfctl_osfp.c
 CFLAGS+=-I${.CURDIR}/../../sbin/pfctl
 CFLAGS+=-DFAKE_PF_KERNEL
 
-# LDFLAGS +=-L${.CURDIR}/../../../libpcap/lib/libpcap
-LDFLAGS +=-L${.CURDIR}/../../../tcpdump/lib/libpcap
+LDFLAGS +=-L${.CURDIR}/../../../tcpdump/libpcap/lib/libpcap
 
 #SRCS+=	smbutil.c print-smb.c
 
@@ -78,7 +77,7 @@ debug:
 	echo ${LIBPCAP}
 
 run:
-	sudo LD_LIBRARY_PATH=/home/shibo/libpcap/lib/libpcap ./tcpdump
+	sudo LD_LIBRARY_PATH=${.CURDIR}/../../../tcpdump/libpcap/lib/libpcap ./tcpdump
 
 .include <bsd.prog.mk>
 
