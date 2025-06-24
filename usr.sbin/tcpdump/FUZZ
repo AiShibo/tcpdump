@@ -1,0 +1,8 @@
+REPLACE THE REGULAR FILES WITH fuzz--* FILES
+
+ADDING LIBPCAP TO DYNAMIC LINKER PATH FOR COMPILATION:
+export LD_LIBRARY_PATH=/root/tcpdump/libpcap/lib/libpcap:$LD_LIBRARY_PATH
+
+FUZZING:
+export AFL_USE_ASAN=1
+env LD_PRELOAD=/lib/libthr.so.3 afl-fuzz -i seeds -o out -- ./tcpdump -P
