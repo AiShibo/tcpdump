@@ -189,8 +189,8 @@ priv_init(int argc, char **argv)
 		return (0);
 	}
 	close(socks[1]);
-
-	if (dup2(socks[0], 3) == -1)
+	//FUZZING: Set fd 3 to be stdin
+	if (dup2(0, 3) == -1)
 		err(1, "dup2 priv sock failed");
 	closefrom(4);
 
@@ -214,8 +214,8 @@ priv_exec(int argc, char *argv[])
 	char *cmdbuf, *infile = NULL;
 	char *RFileName = NULL;
 	char *WFileName = NULL;
-
-	sock = 3;
+	//FUZZING: Set sock to 0 to be stdin
+	sock = 0;
 
 	closefrom(4);
 	for (i = 1; i < _NSIG; i++)
@@ -289,8 +289,11 @@ priv_exec(int argc, char *argv[])
 	setproctitle("[priv]");
 
 	for (;;) {
-		if (may_read(sock, &cmd, sizeof(int)))
+		printf("LOOP\n");
+		if (may_read(sock, &cmd, sizeof(int))) {
+			printf("may_read fail\nsocket: %d\n", sock);
 			break;
+		}
 		switch (cmd) {
 		case PRIV_OPEN_BPF:
 			test_state(cmd, STATE_BPF);
@@ -355,7 +358,7 @@ priv_exec(int argc, char *argv[])
 			break;
 		default:
 			logmsg(LOG_ERR, "[priv]: unknown command %d", cmd);
-			exit(1);
+			break;
 			/* NOTREACHED */
 		}
 	}
@@ -834,6 +837,8 @@ must_read(int fd, void *buf, size_t n)
 void
 must_write(int fd, const void *buf, size_t n)
 {
+	//FUZZING
+	#if 0
 	const char *s = buf;
 	ssize_t res, pos = 0;
 
@@ -850,12 +855,15 @@ must_write(int fd, const void *buf, size_t n)
 			pos += res;
 		}
 	}
+	#endif
 }
 
 /* test for a given state, and possibly increase state */
 static void
 test_state(int action, int next)
 {
+	//FUZZING
+	#if 0
 	if (cur_state < 0 || cur_state > STATE_RUN) {
 		logmsg(LOG_ERR, "[priv] Invalid state: %d", cur_state);
 		_exit(1);
@@ -871,7 +879,7 @@ test_state(int action, int next)
 		    next, cur_state);
 		_exit(1);
 	}
-
+	#endif
 	cur_state = next;
 }
 

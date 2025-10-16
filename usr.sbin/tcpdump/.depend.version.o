@@ -1,1 +1,2 @@
-version.o: version.c
+version.o: /usr/local/llvm19/lib/clang/19/share/asan_ignorelist.txt \
+  version.c

@@ -1,5 +1,6 @@
-print-timed.o: print-timed.c \
-  /home/shibo/tcpdump/usr.sbin/tcpdump/../../compat/compat.h \
+print-timed.o: /usr/local/llvm19/lib/clang/19/share/asan_ignorelist.txt \
+  print-timed.c \
+  /home/share/tcpdump/usr.sbin/tcpdump/../../compat/compat.h \
   /usr/include/stdint.h /usr/include/sys/cdefs.h \
   /usr/include/sys/_types.h /usr/include/machine/_types.h \
   /usr/include/x86/_types.h /usr/include/machine/_limits.h \

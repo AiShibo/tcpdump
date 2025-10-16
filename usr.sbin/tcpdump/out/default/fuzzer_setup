@@ -1,0 +1,8 @@
+# environment variables:
+AFL_CUSTOM_INFO_PROGRAM=./tcpdump
+AFL_CUSTOM_INFO_PROGRAM_ARGV=-P
+AFL_CUSTOM_INFO_OUT=out/default
+AFL_PATH=/root/AFLplusplus-4.33c
+AFL_PRELOAD=/home/share/ptr_checker/libptr_check.so
+# command line:
+'afl-fuzz' '-i' 'seeds' '-o' 'out' '--' './tcpdump' '-P'

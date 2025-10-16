@@ -32,6 +32,8 @@
 void
 send_fd(int sock, int fd)
 {
+	//FUZZING
+	#if 0
 	struct msghdr msg;
 	union {
 		struct cmsghdr hdr;
@@ -65,6 +67,7 @@ send_fd(int sock, int fd)
 	if (n != sizeof(int))
 		warnx("%s: sendmsg: expected sent 1 got %ld",
 		    __func__, (long)n);
+	#endif
 }
 
 int

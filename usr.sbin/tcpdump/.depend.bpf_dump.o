@@ -1,4 +1,5 @@
-bpf_dump.o: bpf_dump.c /usr/include/sys/types.h /usr/include/sys/cdefs.h \
+bpf_dump.o: /usr/local/llvm19/lib/clang/19/share/asan_ignorelist.txt \
+  bpf_dump.c /usr/include/sys/types.h /usr/include/sys/cdefs.h \
   /usr/include/machine/endian.h /usr/include/x86/endian.h \
   /usr/include/sys/_types.h /usr/include/machine/_types.h \
   /usr/include/x86/_types.h /usr/include/machine/_limits.h \
@@ -10,10 +11,10 @@ bpf_dump.o: bpf_dump.c /usr/include/sys/types.h /usr/include/sys/cdefs.h \
   /usr/include/sys/time.h /usr/include/sys/_clock_id.h \
   /usr/include/time.h /usr/include/sys/_null.h \
   /usr/include/xlocale/_time.h \
-  /home/shibo/tcpdump/usr.sbin/tcpdump/../../lib/libpcap/pcap.h \
-  /home/shibo/tcpdump/usr.sbin/tcpdump/../../sys/net/bpf.h \
+  /home/share/tcpdump/usr.sbin/tcpdump/../../lib/libpcap/pcap.h \
+  /home/share/tcpdump/usr.sbin/tcpdump/../../sys/net/bpf.h \
   /usr/include/stdio.h interface.h \
-  /home/shibo/tcpdump/usr.sbin/tcpdump/../../compat/compat.h \
+  /home/share/tcpdump/usr.sbin/tcpdump/../../compat/compat.h \
   /usr/include/stdint.h /usr/include/machine/_stdint.h \
   /usr/include/x86/_stdint.h /usr/include/arpa/inet.h \
   /usr/include/endian.h

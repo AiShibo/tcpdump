@@ -1,4 +1,5 @@
-print-wb.o: print-wb.c /usr/include/sys/types.h /usr/include/sys/cdefs.h \
+print-wb.o: /usr/local/llvm19/lib/clang/19/share/asan_ignorelist.txt \
+  print-wb.c /usr/include/sys/types.h /usr/include/sys/cdefs.h \
   /usr/include/machine/endian.h /usr/include/x86/endian.h \
   /usr/include/sys/_types.h /usr/include/machine/_types.h \
   /usr/include/x86/_types.h /usr/include/machine/_limits.h \
@@ -12,7 +13,7 @@ print-wb.o: print-wb.c /usr/include/sys/types.h /usr/include/sys/cdefs.h \
   /usr/include/xlocale/_time.h /usr/include/netinet/in.h \
   /usr/include/sys/_sockaddr_storage.h /usr/include/netinet6/in6.h \
   /usr/include/stdio.h interface.h \
-  /home/shibo/tcpdump/usr.sbin/tcpdump/../../compat/compat.h \
+  /home/share/tcpdump/usr.sbin/tcpdump/../../compat/compat.h \
   /usr/include/stdint.h /usr/include/machine/_stdint.h \
   /usr/include/x86/_stdint.h /usr/include/arpa/inet.h \
   /usr/include/endian.h addrtoname.h

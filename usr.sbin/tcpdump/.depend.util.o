@@ -1,4 +1,5 @@
-util.o: util.c /usr/include/sys/types.h /usr/include/sys/cdefs.h \
+util.o: /usr/local/llvm19/lib/clang/19/share/asan_ignorelist.txt util.c \
+  /usr/include/sys/types.h /usr/include/sys/cdefs.h \
   /usr/include/machine/endian.h /usr/include/x86/endian.h \
   /usr/include/sys/_types.h /usr/include/machine/_types.h \
   /usr/include/x86/_types.h /usr/include/machine/_limits.h \
@@ -14,14 +15,14 @@ util.o: util.c /usr/include/sys/types.h /usr/include/sys/cdefs.h \
   /usr/include/sys/limits.h /usr/include/sys/stat.h /usr/include/ctype.h \
   /usr/include/_ctype.h /usr/include/runetype.h \
   /usr/include/xlocale/_ctype.h /usr/include/err.h /usr/include/errno.h \
-  /home/shibo/tcpdump/usr.sbin/tcpdump/../../lib/libpcap/pcap.h \
-  /home/shibo/tcpdump/usr.sbin/tcpdump/../../sys/net/bpf.h \
+  /home/share/tcpdump/usr.sbin/tcpdump/../../lib/libpcap/pcap.h \
+  /home/share/tcpdump/usr.sbin/tcpdump/../../sys/net/bpf.h \
   /usr/include/stdio.h /usr/include/stdarg.h /usr/include/x86/stdarg.h \
   /usr/include/sys/_stdarg.h /usr/include/stdlib.h /usr/include/string.h \
   /usr/include/strings.h /usr/include/xlocale/_strings.h \
   /usr/include/xlocale/_string.h /usr/include/unistd.h interface.h \
-  /home/shibo/tcpdump/usr.sbin/tcpdump/../../compat/compat.h \
+  /home/share/tcpdump/usr.sbin/tcpdump/../../compat/compat.h \
   /usr/include/stdint.h /usr/include/machine/_stdint.h \
   /usr/include/x86/_stdint.h /usr/include/arpa/inet.h \
   /usr/include/endian.h privsep.h \
-  /home/shibo/tcpdump/usr.sbin/tcpdump/../../lib/libpcap/pcap-int.h
+  /home/share/tcpdump/usr.sbin/tcpdump/../../lib/libpcap/pcap-int.h

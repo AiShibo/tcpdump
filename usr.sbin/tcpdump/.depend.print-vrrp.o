@@ -1,4 +1,5 @@
-print-vrrp.o: print-vrrp.c /usr/include/stdio.h /usr/include/sys/cdefs.h \
+print-vrrp.o: /usr/local/llvm19/lib/clang/19/share/asan_ignorelist.txt \
+  print-vrrp.c /usr/include/stdio.h /usr/include/sys/cdefs.h \
   /usr/include/sys/_null.h /usr/include/sys/_types.h \
   /usr/include/machine/_types.h /usr/include/x86/_types.h \
   /usr/include/machine/_limits.h /usr/include/x86/_limits.h \
@@ -11,7 +12,7 @@ print-vrrp.o: print-vrrp.c /usr/include/stdio.h /usr/include/sys/cdefs.h \
   /usr/include/sys/_timespec.h /usr/include/sys/unistd.h \
   /usr/include/netinet/in.h /usr/include/sys/_sockaddr_storage.h \
   /usr/include/netinet6/in6.h interface.h \
-  /home/shibo/tcpdump/usr.sbin/tcpdump/../../compat/compat.h \
+  /home/share/tcpdump/usr.sbin/tcpdump/../../compat/compat.h \
   /usr/include/stdint.h /usr/include/machine/_stdint.h \
   /usr/include/x86/_stdint.h /usr/include/arpa/inet.h \
   /usr/include/endian.h extract.h addrtoname.h

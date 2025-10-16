@@ -81,4 +81,10 @@ run:
 
 .include <bsd.prog.mk>
 
+# DEBUG
+# CFLAGS+=-O0 -g3 -fno-omit-frame-pointer
+
+# FUZZING
+CC=afl-clang-lto
+
 
